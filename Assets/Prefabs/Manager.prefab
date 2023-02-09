@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4376060448575200601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5749357466040982698}
+  - component: {fileID: 131667137404538662}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5749357466040982698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376060448575200601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131667137404538662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376060448575200601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7950d1267c3814ea829f04e1c79887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missions:
+  - id: 1
+    missionName: Dernier rempart
+    description: "Les aliens nous envahissent, vous devez d\xE9truire leur vaisseau
+      avant qu'il ne soit trop tard."
+    requirement: []
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 2
+    missionName: Poursuite
+    description: "Les aliens battent en retraite vers la lune, d\xE9truisez-les."
+    requirement:
+    - 1
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 3
+    missionName: Le portail
+    description: "Les aliens poss\xE8dent un t\xE9l\xE9porteur \xE0 cot\xE9 de la
+      lune. S\xE9curisez-le."
+    requirement:
+    - 2
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 4a
+    missionName: Destruction
+    description: "Des vaisseaux aliens ont \xE9t\xE9 vu proche de mars. Detruisez-les."
+    requirement:
+    - 3
+    exclusiveWith:
+    - 4b
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 4b
+    missionName: "Ast\xE9roides"
+    description: "Les aliens se cachent dans une ceinture d'ast\xE9roides. Detruisez-les."
+    requirement:
+    - 3
+    exclusiveWith:
+    - 4a
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 5
+    missionName: Jupiter
+    description: "Les aliens tentent de se regrouper vers Jupiter, d\xE9truisez-les
+      avant qu'ils ne soient trop nombreux."
+    requirement:
+    - 4a
+    - 4b
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 6
+    missionName: Base Alien
+    description: "Les aliens poss\xE8dent une base proche de Jupiter. D\xE9truisez-la."
+    requirement:
+    - 5
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 7a
+    missionName: Embuscade
+    description: "Les aliens se cachent dans une ceinture d'ast\xE9roides. D\xE9truisez-les."
+    requirement:
+    - 6
+    exclusiveWith:
+    - 7b
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 7b
+    missionName: "Station Mini\xE8re"
+    description: "Une station mini\xE8re alien a \xE9t\xE9 localis\xE9 dans une ceinture
+      d'ast\xE9roides. D\xE9truisez-la."
+    requirement:
+    - 6
+    exclusiveWith:
+    - 7a
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted:
+    - {fileID: 0}
+    missionMarker: {fileID: 0}
+  - id: 8
+    missionName: Infiltration
+    description: "Le vaisseau m\xE8re alien est \xE0 notre port\xE9. Infiltrez-vous
+      \xE0 l'int\xE9rieur et d\xE9truisez son noyau interne."
+    requirement:
+    - 7a
+    - 7b
+    exclusiveWith: []
+    exclusiveTrail: {fileID: 0}
+    trailsIfCompleted: []
+    missionMarker: {fileID: 0}
+  items:
+  - id: STANDARD
+    name: Tir Standard
+    cost: 0
+    description: Module de tir standard
+    image: {fileID: 21300000, guid: bd62e4ee82189b848959acb33c862880, type: 3}
+  - id: DOUBLE
+    name: Double Tir
+    cost: 10
+    description: Permet de tirer 2 projectiles
+    image: {fileID: 21300000, guid: 495f325e7300f494699ead54cdbc42fa, type: 3}
+  - id: TRI
+    name: Triple Tir
+    cost: 15
+    description: Permet de tirer 3 projectiles
+    image: {fileID: 21300000, guid: 29cf4ffd613fff0428f1b05db9801144, type: 3}
+  - id: BOMB
+    name: Bombe
+    cost: 20
+    description: Permet de tirer des bombes
+    image: {fileID: 21300000, guid: abb263fe1a659ec47ae6ad6358fb2166, type: 3}
+  - id: SHOTGUN
+    name: Chevrotine
+    cost: 20
+    description: Permet de tirer des tirs explosifs
+    image: {fileID: 21300000, guid: 0376ad4a9fe897b43a0790ce6a618ee9, type: 3}
+  - id: HOMING
+    name: "Missile Guid\xE9"
+    cost: 25
+    description: "Permet de tirer des missiles auto-guid\xE9s"
+    image: {fileID: 21300000, guid: 32da29514cf64c0439d382e9085acde8, type: 3}
+  - id: SPEED
+    name: Module de Vitesse
+    cost: 10
+    description: Permet d'aller plus vite
+    image: {fileID: 21300000, guid: b38cc40001f1d00449a16bacfabe6dac, type: 3}
+  - id: HEALTH
+    name: Module d'Armure
+    cost: 15
+    description: Permet d'avoir plus de vie
+    image: {fileID: 21300000, guid: 82675d8b823298344925896f1b8a469b, type: 3}
+  - id: TARGET
+    name: Viseur Automatique
+    cost: 30
+    description: "Les tirs sont dirig\xE9s vers l'ennemi cibl\xE9"
+    image: {fileID: 21300000, guid: 4f76791c1bce45d45b0ca992f5212522, type: 3}

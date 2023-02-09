@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 47cbea055d760fb499bee9b7ab426a07
+  - enabled: 1
+    path: Assets/Scenes/Missions/1.unity
+    guid: e38d0a1080bf16e458f2eee258faabcd
+  - enabled: 1
+    path: Assets/Scenes/Missions/2.unity
+    guid: abdd9f17598ceca4d9591ca7f8fe9068
+  - enabled: 1
+    path: Assets/Scenes/Missions/3.unity
+    guid: 606daa61851653c4c9c9c62b19fff088
+  - enabled: 1
+    path: Assets/Scenes/Missions/4a.unity
+    guid: 4d29947dbf100114fb8fd6101143925b
+  - enabled: 1
+    path: Assets/Scenes/Missions/4b.unity
+    guid: bad536cd1209996478dc961d956c8bff
+  - enabled: 1
+    path: Assets/Scenes/Missions/5.unity
+    guid: b4bdba765d70a184f84c1438729a8d3c
+  - enabled: 1
+    path: Assets/Scenes/Missions/6.unity
+    guid: 428f9d8ef1f09f84d9029bff6a3ae70b
+  - enabled: 1
+    path: Assets/Scenes/Missions/7a.unity
+    guid: ccbe5ce000d47844c8e60ff061206891
+  - enabled: 1
+    path: Assets/Scenes/Missions/7b.unity
+    guid: 0a9e78832bc759247b0cf9881f88d08b
+  - enabled: 1
+    path: Assets/Scenes/Missions/8.unity
+    guid: 58f6cbdc20a03fe40ace3f935f478f4b
+  m_configObjects: {}
